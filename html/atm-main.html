@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/style-main.css">
+    <title>Home - Nex Bank</title>
+</head>
+<body>
+<header>
+    <iconify-icon icon="mdi:color-helper" style="color: #1dcd8d;" width="40" height="40" rotate="270deg" flip="vertical"></iconify-icon>
+    <h1>Nex Bank</h1>
+</header>
+
+<section id="greeting">
+    <h2>Welcome <span id="accountName"></span>!</h2>
+</section>
+
+<main>
+    <div id="checkBalance" class="cards">
+        <section class="up">
+            <iconify-icon icon="healthicons:money-bag" style="color: #172627;" width="50" height="50" rotate="180deg" flip="horizontal,vertical"></iconify-icon>
+            <h3>Check Balance</h3>
+        </section>
+        <div class="hidden" id="balanceDiv">
+            <p>$<span id="balanceAmount"></span></p>
+        </div>
+    </div>
+
+    <div class="cards">
+        <section class="up">
+            <iconify-icon icon="fluent:money-hand-16-filled" style="color: #172627;" width="50" height="50" rotate="180deg" flip="horizontal,vertical"></iconify-icon>
+            <h3>Enter</h3>
+            <h3>Amount</h3>
+        </section>
+
+        <div id="enterDiv" class="hidden">
+            <input type="number" placeholder="Enter an amount" id="enterInput">
+            <div class="buttons-container">
+                <button id="enterConfirm">Confirm</button>
+                <button id="enterCancelButton">Cancel</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="cards">
+        <section class="up">
+            <iconify-icon icon="grommet-icons:money" style="color: #172627;" width="50" height="50" rotate="180deg" flip="horizontal,vertical"></iconify-icon>
+            <h3>Withdraw Amount</h3>
+        </section>
+
+        <div id="withdrawDiv" class="hidden">
+            <input type="number" placeholder="Enter an amount" id="withdrawInput">
+            <div class="buttons-container">
+                <button id="withdrawConfirm">Confirm</button>
+                <button id="withdrawCancelButton">Cancel</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<script src="../js/main-script.js"></script>
+<!--<script src="../../cajero-auto0/js/sign-in.js"></script>-->
+</body>
+</html>

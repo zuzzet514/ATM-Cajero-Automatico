@@ -1,0 +1,130 @@
+:root {
+    --bg-color: #172627;
+    --main-color: #1dcd8d;
+    --second-main: white;
+    --input-color: #1c9d70;
+    --details-color: #194a42;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif, Roboto;
+    color: var(--second-main);
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+header {
+    display:flex;
+    flex-direction: row;
+    padding: 20px;
+    align-items: center;
+    margin: 10px 10px;
+}
+
+#greeting {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 3vmax;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 5px 18px 5px;
+}
+
+
+.cards {
+    height: 370px;
+    width: 290px;
+    margin: 10px 30px;
+    background-color: var(--main-color);
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div section {
+    padding: 10px 25px;
+    margin: 20px 10px;
+    font-size: 23px;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    margin-top: 10px;
+    transition: 0.2s;
+}
+
+#balanceDiv {
+    display: flex;
+    justify-content: center;
+}
+
+p, p span {
+    font-family: "Tw Cen MT Condensed", sans-serif;
+    font-size: 100px;
+    align-self: center;
+}
+
+#enterDiv, #withdrawDiv {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+input {
+    width: 50%;
+    border-radius: 5px;
+    margin: 15px 0;
+    border: none;
+    background-color: var(--input-color);
+    box-shadow: none;
+    outline: none;
+    padding: 5px;
+    height: 25px;
+}
+
+input::placeholder {
+    color: var(--second-main);
+}
+
+input:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+button {
+    color: var(--details-color);
+    border: none;
+    padding: 10px;
+    font-weight: 800;
+    border-radius: 5px;
+    font-family: Roboto, sans-serif;
+    cursor: pointer;
+}
+
+button:hover {
+    color: var(--second-main);
+    background-color: var(--details-color);
+}
+
+#balanceDiv, #enterDiv, #withdrawDiv {
+    transition: 0.2s;
+}

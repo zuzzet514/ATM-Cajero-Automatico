@@ -1,0 +1,235 @@
+:root {
+    --main-color: #1dcd8d;
+    --second-color: white;
+    --third-color: #172627;
+    --fourth-color: #1d3332;
+    --fifth-color: #2ee577;
+}
+
+html {
+    font-family: sans-serif, Roboto;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+    color: var(--second-color);
+    list-style: none;
+}
+
+
+body {
+    /* what's the difference of % vs vw vh?
+     %: it means the element will take up the full available width and height within its parent element. If the parent
+     element's dimensions change, the child element will adjust accordingly
+     vw vh: it will take up the full width/height of the viewport, regardless of its parent container's dimensions.
+     */
+    background-color: var(--main-color);
+    margin: 1vh 2.5vw 0 2.5vw;
+
+    display: grid;
+    grid-template-rows: 55px auto; /* header's height is 80px*/
+    align-content: space-between;
+}
+
+/* #######################
+        Initial Page
+##########################*/
+
+header {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px auto; /*the logo has 300px of space*/
+    justify-content: space-between;
+}
+
+header >* {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+header section {
+    align-content: space-around;
+    justify-content: center;
+}
+
+header ul {
+    justify-self: end;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+header ul li {
+    margin: 1vw;
+}
+
+main {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: minmax(300px, 500px) auto;
+    grid-auto-flow: column;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+main >* {
+    display: flex;
+    align-items: center;
+}
+
+#important-container {
+}
+
+#important-container p {
+    font-size: 5.8vw;
+}
+
+.buttons-slogan {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.buttons-slogan >* {
+}
+
+.btns {
+    display: flex;
+    align-content: flex-end;
+}
+
+.btns button {
+    background-color: var(--third-color);
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    padding: 0.7rem;
+    font-size: 1rem;
+    width: 100px;
+}
+
+button:hover{
+    color: var(--fourth-color);
+    background-color: var(--second-color);
+}
+
+#signInBtn {
+    margin-right: 5vw;
+}
+
+#img-container {
+    width: 40vw;
+}
+
+img {
+    width: 100%;
+}
+
+/* #######################
+       Sign In Page
+####################### */
+
+#signIn-container {
+    width: 70%;
+    height: 80%;
+    background: var(--fourth-color);
+    text-align: center;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 7px;
+    justify-content: space-evenly;
+
+}
+
+#signIn-container >* {
+    display: none;
+
+}
+
+#signIn-container .top {
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    justify-content: center;
+    width: 80%;
+    border-bottom: 0.4rem var(--fifth-color) solid;
+}
+
+#signIn-container .middle {
+    width: 100%;
+    flex-direction: column;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+#signIn-container .middle .InputAndIcon {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-evenly;
+    border: 2px solid var(--fifth-color);
+    border-radius: 5px;
+
+    margin: 1vw 0;
+}
+
+#signIn-container .middle .InputAndIcon iconify-icon {
+    background-color: var(--fifth-color);
+    position: relative;
+    padding: 0.3rem;
+}
+
+#signIn-container .middle .InputAndIcon input {
+    width: 100%;
+    height: 1.8vw;
+    color: var(--second-color);
+    padding-left: 3%;
+    border: none;
+    background-color: var(--fourth-color);
+}
+
+#signIn-container .middle .InputAndIcon input:focus {
+    border: none ;
+    box-shadow: none;
+    outline: none;
+}
+
+#signIn-container .middle .InputAndIcon input::placeholder {
+    color: var(--second-color);
+    font-weight: 600;
+}
+
+#signIn-container .middle button {
+    width: 60%;
+    background-color: var(--second-color);
+    border: none;
+    color: var(--third-color);
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#signIn-container .bottom {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+
+
